@@ -1,5 +1,91 @@
+:root{
+    --primary-color: gray;
+    --orange: rgb(250, 180, 50);
+}
+
+.bold{
+    font-weight: bold;
+}
+
 .container{
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 35vw;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    padding: 2rem;
 }
+
+span{
+    color: var(--orange);
+}
+
+h1{
+    font-size: 50px;
+}
+
+h3{
+    text-align: center;
+    padding: 0 40px;
+}
+
+.bill, .cash{
+    display: flex;
+    flex-direction: column;
+}
+
+.bill>label,.cash>label{
+    padding: 1rem auto 0.5rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input{
+    padding: 5px;
+    height: 4vh;
+    margin: 0 30px 1rem 30px;
+    text-align: center;
+}
+
+#btn-check{
+    padding: 0.5rem 1.25rem ;
+    font-size: large;
+    width: fit-content;
+    margin: 0 auto 1rem auto;
+    cursor:pointer;
+}
+
+#error-msg {
+    color: rgb(171, 30, 30);
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+table,th,td{
+    border: 1px solid;
+    padding: 5px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background-color: rgb(151, 139, 123);
+    color: white;
+}
+
+td{
+    text-align: center; 
+}
+
+ .change-table>caption{
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem auto;
+    margin-bottom: 1rem;
+}
+
+
+
+

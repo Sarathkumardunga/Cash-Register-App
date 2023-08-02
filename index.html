@@ -4,28 +4,36 @@
     <title>Cash Register Manager</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Cash Register Manager</h1>
+      <h1>Cash Register <span>Manager</span></h1>
       <h3>
         Enter the bill amount and the cash given by the customer and know
         minimum number of notes to return.
       </h3>
 
       <!--Bill section-->
-      <label for="bill-amt">Bill Amount:</label>
-      <input id="bill-amt" type="text" placeholder="Enter the bill amount" />
+      <div class="bill">
+        <label for="bill-amt">Bill Amount:</label>
+        <input id="bill-amt" type="text" placeholder="Enter the bill amount" />
+      </div>
 
       <!--Cash section-->
-      <label for="cash-given">Cash Given:</label>
-      <input id="cash-given" type="text" placeholder="Enter the cash amount" />
+      <div class="cash">
+        <label for="cash-given">Cash Given:</label>
+        <input
+          id="cash-given"
+          type="text"
+          placeholder="Enter the cash amount"
+        />
+      </div>
 
       <!--Check-->
-      <button id="btn-check">Check</button>
+      <button id="btn-check" class="bold">Check</button>
 
-      <p id="error-msg"></p>
+      <p id="error-msg" class="bold"></p>
 
       <!--Table denomination section-->
       <table class="change-table">
@@ -33,7 +41,7 @@
           Return Change:
         </caption>
         <tr>
-          <th>No. of Notes</th>
+          <th>No. of <br />Notes</th>
           <td class="no-of-notes"></td>
           <td class="no-of-notes"></td>
           <td class="no-of-notes"></td>
@@ -54,7 +62,7 @@
         </tr>
       </table>
     </div>
-    
+
     <!--Linking external js file to the Html file-->
     <script src="app.js" type="text/javascript"></script>
   </body>

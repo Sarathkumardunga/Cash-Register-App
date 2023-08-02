@@ -9,7 +9,9 @@ const denominations = [2000,500,100,20,10,5,1];
 
 const validateAmount = ()=>{
     hideError();
-    if(billAmount.value < 0 ){
+
+
+    if(billAmount.value < 0 || billAmount.value === undefined){
         showError("Invalid Bill amount");
     }
     else if(billAmount.value > cashGiven.value){
