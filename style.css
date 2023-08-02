@@ -105,5 +105,47 @@ td{
 }
 
 
+/* Add a new media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Adjust the container width for smaller screens */
+        padding: 1rem;
+        /* Reduce padding for smaller screens */
+    }
 
+    h1 {
+        font-size: 36px;
+        /* Reduce font size for smaller screens */
+    }
+
+    .bill,
+    .cash {
+        margin: 3px 10px 1rem 10px;
+        /* Adjust margins for smaller screens */
+    }
+
+    input {
+        margin: 3px 10px 1rem 10px;
+        /* Adjust margins for smaller screens */
+    }
+
+    #btn-check {
+        font-size: medium;
+        /* Adjust font size for smaller screens */
+    }
+
+    .change-table>caption {
+        font-size: 1rem;
+        /* Reduce font size for smaller screens */
+        margin-bottom: 0.5rem;
+        /* Adjust margin for smaller screens */
+    }
+
+    th,
+    td {
+        padding: 3px;
+        /* Adjust padding for smaller screens */
+    }
+}
 
