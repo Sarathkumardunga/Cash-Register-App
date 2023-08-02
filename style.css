@@ -43,16 +43,27 @@ h3{
 input{
     padding: 5px;
     height: 4vh;
-    margin: 0 30px 1rem 30px;
+    margin: 3px 30px 1rem 30px;
     text-align: center;
+    font-weight: bold;
 }
 
 #btn-check{
+    background-color: rgb(84, 233, 116);
+    color: white;
     padding: 0.5rem 1.25rem ;
     font-size: large;
     width: fit-content;
     margin: 0 auto 1rem auto;
     cursor:pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#btn-check:hover{
+    background-color:rgb(241, 248, 242);
+    color: rgb(15, 14, 14);
+
 }
 
 #error-msg {
@@ -77,6 +88,7 @@ th{
 
 td{
     text-align: center; 
+    color: whitesmoke;
 }
 
  .change-table>caption{
@@ -84,6 +96,12 @@ td{
     font-weight: bold;
     padding: 0.5rem auto;
     margin-bottom: 1rem;
+    color:rgb(235, 231, 123);
+    text-transform: uppercase;
+}
+
+.no-of-notes{
+    font-weight: bold;
 }
 
 

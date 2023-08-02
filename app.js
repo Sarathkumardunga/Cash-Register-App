@@ -25,7 +25,9 @@ const validateAmount = ()=>{
                 amountToBeReturned/denominations[i]
             );
             amountToBeReturned %= denominations[i];
-            notesCount[i].innerText = noOfNotes;  
+            if(noOfNotes !== 0){
+                notesCount[i].innerText = noOfNotes;
+            }  
         }
     }
 }
