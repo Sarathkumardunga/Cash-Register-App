@@ -8,24 +8,29 @@ const notesCount = document.querySelectorAll(".no-of-notes");
 const denominations = [2000,500,100,20,10,5,1];
 
 const validateAmount = ()=>{
+    // Initialising with empty values 
+    for(let i =0; i< denominations.length; i++){
+        notesCount[i].innerText = "";
+    }
+
     hideError();
 
+    var bill = parseInt(billAmount.value);
+    var cash = parseInt(cashGiven.value);
 
-    if(billAmount.value < 0 || billAmount.value === undefined){
+    if(bill < 0 || cash < 0 || isNaN(bill) || isNaN(cash)){
         showError("Invalid Bill amount");
     }
-    else if(billAmount.value > cashGiven.value){
-        const difference = billAmount.value - cashGiven.value;
+    else if(bill > cash){
+        const difference = bill - cash;
         showError("This is not sufficient. You still have to pay Rs." + difference);
     }
     else{
-        var amountToBeReturned = cashGiven.value - billAmount.value;
+        var amountToBeReturned = cash - bill;
         for(let i =0; i< denominations.length; i++){
-            var noOfNotes = Math.trunc(
-                amountToBeReturned/denominations[i]
-            );
+            var noOfNotes = Math.trunc(amountToBeReturned/denominations[i]);
             amountToBeReturned %= denominations[i];
-            if(noOfNotes !== 0){
+            if(noOfNotes > 0){
                 notesCount[i].innerText = noOfNotes;
             }  
         }
